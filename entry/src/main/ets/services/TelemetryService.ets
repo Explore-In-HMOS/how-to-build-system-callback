@@ -21,7 +21,7 @@ const SYSCAP_BATTERY: string = 'SystemCapability.PowerManager.BatteryManager.Cor
  * SystemLoadLevel enum — never raw CPU%/memory/thermal. Rather than depend on an unresolved API, we
  * synthesize a 0..3 (LOW/NORMAL/MEDIUM/HIGH) pressure level from the real signals we already read.
  *
- * All SystemCapabilities are canIUse-guarded so the dashboard degrades gracefully on lite wearables.
+ * All SystemCapabilities are canIUse-guarded so the dashboard degrades gracefully on SportWatch (Lite Wearable) devices.
  * getSystemMemInfo/getCpuUsage are cheap; we deliberately avoid getPss/getAppNativeMemInfo (smaps) on
  * the UI thread. Poll cadence is set by the caller (low, e.g. 2 s) via setInterval.
  */
